@@ -1,0 +1,22 @@
+const leia = require('readline-sync')
+
+let valorPlano;
+
+nome = leia.question("Digite seu nome: ")
+idade = leia.question("Digite sua idade: ")
+
+if (idade > 0 && idade <= 10) {
+    valorPlano = 100;
+} else if (idade <= 29) {
+    valorPlano = 200;
+} else if (idade <= 45) {
+    valorPlano = 300;
+} else if (idade <= 59) {
+    valorPlano = 400;
+} else if (idade <= 65) {
+    valorPlano = 500;
+} else {
+    valorPlano = 1000;
+}
+
+console.log(`Seu plano de saúde custará R$${valorPlano}`);
